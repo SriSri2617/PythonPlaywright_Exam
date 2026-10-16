@@ -6,7 +6,7 @@ def test_add_book():
     
     store = BookStore()
     
-    store.add_book(
+    store.addBook(
         author = "Kent Beck",
         title = "TDD by Example"
     )
@@ -20,12 +20,12 @@ def test_add_book():
 def test_toggle_favorite():
     store = BookStore()
 
-    store.add_book(
+    store.addBook(
         author = "Kent Beck",
         title = "TDD by Example"
     )
 
-    store.toggle_Favorite(1)
+    store.toggleFavorite(1)
 
     assert store.books[0].favorite is True
     
@@ -34,7 +34,7 @@ def test_toggle_favorite():
 def test_get_book_by_id():
     store = BookStore()
 
-    store.add_book(
+    store.addBook(
         author="Kent Beck",
         title="TDD by Example"
     )

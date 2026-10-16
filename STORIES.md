@@ -81,7 +81,7 @@ ___
     3.3 The user can add the book.
     3.4 The added book appears in the catalogue.
 
-**Scenario**
+**Scenario 3.1 - Add a Book with valid Input**
 
     1. Clcik on " Lägg till bok" page
     2. Enter the tile
@@ -94,6 +94,19 @@ ___
     - The book is added successfully.
     - The new book appears in the catalogue.
     - The total book count increases by one.
+
+**Scenario 3.2 - Add a Book with Invalid Input**
+
+    1. Clcik on " Lägg till bok" page
+    2. Enter invalid title
+    3. Enter invalid Förfättare name
+    4. Click "Lägg till ny bok"
+    5. Error message or message should be displayed
+
+**Expected Result:**
+
+    - A message should inform the user if the input is invalid or missing.
+
 ___
 **User Story 4: View reading statistics**
 ---
