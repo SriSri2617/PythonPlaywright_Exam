@@ -1,0 +1,46 @@
+import re
+from behave import *
+from src.features.pages.mina_bocker import MinaBocker
+
+
+# Scenario : Add a favorite book
+@given('the user is viewing the Katalog')
+def step_view_katalog(context):
+    context.page.goto(context.base_url)
+    context.minabocker = MinaBocker(context.page)
+    context.minabocker.view_catalog_page()   
+
+
+@when('the user clicks the favourite icon on a book')
+@when(u'the user clicks the favourite icon again')
+def step_select_favorit_book(context):
+    context.minabocker.select_favorite_book()
+
+
+@then('the book should be marked as favourite')
+def step_verify_favorit_book_icon(context):
+    context.minabocker.verify_favorit_book_icon()
+
+
+@then('the book should appear in Mina Böcker')
+def step_verify_mina_bocker_page(context):
+    context.minabocker.verify_mina_bocker_page()
+
+
+# Scenario : Remove a book from favorite
+@given('a book is marked as favourite')
+def step_given_book_is_favorite (context):
+    context.page.goto(context.base_url)
+    context.minabocker = MinaBocker(context.page)
+    context.minabocker.view_catalog_page()
+    context.minabocker.verify_favorit_book_icon()
+
+
+@then('the favourite marking should be removed')
+def step_verify_favorit_icon_removed(context):
+    context.minabocker.verify_favorit_icon_removed_katalog_page()
+
+
+@then('the book should no longer appear in Mina Böcker')
+def step_book_removed_from_mina_bocker_page(context):
+    context.minabocker.verify_book_removed_mina_bocker_page()  

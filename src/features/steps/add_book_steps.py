@@ -1,0 +1,39 @@
+from behave import *
+from playwright.sync_api import expect
+from src.features.pages.add_book import AddBookPage
+
+
+@given('the user is on the Lägg Till Bok page')
+def step_given_add_book(context):
+    context.page.goto(context.base_url)
+    context.add_book_page = AddBookPage(context.page)
+    context.add_book_page.add_book()   
+
+@when('the user enters a title')
+def step_enter_title(context):
+    context.add_book_page.enter_title("TDD by Example")   
+
+
+@when('the user enters author name')
+def step_enter_author(context):
+    context.add_book_page.enter_author("Kent")  
+
+@when('clicks Lägg till ny bok')
+def step_click_add_book(context):
+    context.add_book_page.click_add_book()
+
+@then('Lägg till ny bok is disabled')
+def step_verify_add_book_btn_disabled(context):
+    add_btn = context.page.get_by_role("button", name="Lägg till ny bok")
+    expect(add_btn).to_be_disabled()
+
+
+@when('user click katalog')
+def step_catalog_page   (context):
+    context.add_book_page.open_katalog_page()
+    
+@then('the added book should appear in the catalogue')
+def step_verify_book_added_catalog(context):
+    expect(
+        context.page.locator(".book")
+        .filter(has_text = "TDD by Example")).to_be_visible()
