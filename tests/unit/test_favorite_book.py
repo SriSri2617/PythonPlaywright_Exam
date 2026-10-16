@@ -1,5 +1,5 @@
 import pytest
-from src.favoritebooks import FavoriteBooks
+from src.fav_books import FavoriteBooks
 from src.book_store import Book
 
   
