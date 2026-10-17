@@ -14,7 +14,7 @@ def step_view_katalog(context):
 @when('the user clicks the favourite icon on a book')
 @when(u'the user clicks the favourite icon again')
 def step_select_favorit_book(context):
-    context.minabocker.select_favorite_book()
+    context.minabocker.click_favorite_icon()
 
 
 @then('the book should be marked as favourite')
@@ -33,7 +33,7 @@ def step_given_book_is_favorite (context):
     context.page.goto(context.base_url)
     context.minabocker = MinaBocker(context.page)
     context.minabocker.view_catalog_page()
-    context.minabocker.verify_favorit_book_icon()
+    context.minabocker.click_favorite_icon()
 
 
 @then('the favourite marking should be removed')

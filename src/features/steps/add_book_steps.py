@@ -1,6 +1,7 @@
 from behave import *
 from playwright.sync_api import expect
 from src.features.pages.add_book import AddBookPage
+from src.features.pages.add_book import AddBookLocators
 
 
 @given('the user is on the Lägg Till Bok page')
@@ -24,7 +25,7 @@ def step_click_add_book(context):
 
 @then('Lägg till ny bok is disabled')
 def step_verify_add_book_btn_disabled(context):
-    add_btn = context.page.get_by_role("button", name="Lägg till ny bok")
+    add_btn = context.page.get_by_role("button", name=AddBookLocators.Submit_Button)
     expect(add_btn).to_be_disabled()
 
 @when('user click katalog')

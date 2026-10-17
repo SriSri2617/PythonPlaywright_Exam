@@ -3,6 +3,7 @@ from playwright.sync_api import expect
 from src.features.pages.katalog import CatalogPage
 
 
+
 @given('the user opens the "Läslistan"')
 def step_catalog_page(context):
     context.page.goto(context.base_url)   
