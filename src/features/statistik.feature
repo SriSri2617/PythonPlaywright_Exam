@@ -12,7 +12,7 @@ Feature: View reading statistics
     
   Scenario:  Statistik view after adding a book    
     Given the current total book count is displayed
-    When the user adds a new book
+    When the user adds a new book with title "Test Automation Book" and author "John Smith"
     Then the total book count should increase by one
     
   

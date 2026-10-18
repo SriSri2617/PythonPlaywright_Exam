@@ -1,4 +1,7 @@
 import re
+
+from playwright.sync_api import expect
+
 from src.features.pages.base_locators import AddBookLocators, BaseLocators
 
 class AddBookPage:
@@ -7,23 +10,30 @@ class AddBookPage:
        
     # Add_book page    
     def add_book(self):
-        add_book_btn = self.page.get_by_test_id(BaseLocators.Add_Book)
-        add_book_btn.click()
+        self.page.get_by_test_id(
+            BaseLocators.Add_Book
+        ).click()   
        
     # enter title
     def enter_title(self, title):
-        title_input = self.page.get_by_test_id(AddBookLocators.Title_Input)
-        title_input.fill(title)
+        self.page.get_by_test_id(
+            AddBookLocators.Title_Input
+        ).fill(title)
+       
         
     def enter_author(self, author):
-        author_input = self.page.get_by_test_id(AddBookLocators.Author_Input)
-        author_input.fill(author)
+        self.page.get_by_test_id(
+            AddBookLocators.Author_Input
+        ).fill(author)
+       
         
     def click_add_book(self):
-        add_new_book_btn = self.page.get_by_role("button", name = AddBookLocators.Submit_Button)
-        add_new_book_btn.click()
+        self.page.get_by_test_id(
+            AddBookLocators.Submit_Button
+        ).click()
         
-    def open_katalog_page(self):
-        katalog_page = self.page.get_by_test_id(BaseLocators.Catalog)
-        katalog_page.click()
+    def add_btn_disabled(self):
+        expect(self.page.get_by_test_id(
+            AddBookLocators.Submit_Button)
+        ).to_be_disabled()
    

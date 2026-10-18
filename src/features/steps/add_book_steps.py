@@ -2,11 +2,13 @@ from behave import *
 from playwright.sync_api import expect
 from src.features.pages.add_book import AddBookPage
 from src.features.pages.add_book import AddBookLocators
+from src.features.pages.katalog import CatalogPage
 
 
 @given('the user is on the Lägg Till Bok page')
 def step_given_add_book(context):
-    context.page.goto(context.base_url)
+    context.page.goto(context.base_url, 
+                      wait_until="domcontentloaded")
     context.add_book_page = AddBookPage(context.page)
     context.add_book_page.add_book()   
 
@@ -25,15 +27,16 @@ def step_click_add_book(context):
 
 @then('Lägg till ny bok is disabled')
 def step_verify_add_book_btn_disabled(context):
-    add_btn = context.page.get_by_role("button", name=AddBookLocators.Submit_Button)
-    expect(add_btn).to_be_disabled()
+    context.add_book_page.add_btn_disabled()
 
 @when('user click katalog')
 def step_catalog_page   (context):
-    context.add_book_page.open_katalog_page()
+    context.catalog = CatalogPage(context.page)    
+    context.catalog.click_catalog_btn()
     
 @then('the added book "{title}" should appear in the catalogue')
 def step_verify_book_added_catalog(context, title):
     expect(
         context.page.locator(".book")
-        .filter(has_text = title)).to_be_visible()
+        .filter(has_text = title)
+    ).to_be_visible()

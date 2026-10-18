@@ -11,7 +11,7 @@ class AddBookLocators:
     # Lägg till bok page locators    
     Title_Input = "add-input-title"     # test-id
     Author_Input = "add-input-author"   # test-id
-    Submit_Button = "Lägg till ny bok"  # name
+    Submit_Button = "add-submit"        # test-id
     
     
 class Catalog:
@@ -23,7 +23,10 @@ class Catalog:
 class MyBooks:
     My_List = "book-list"      # test-id
     
-    
+
+class Statistics:
+    Book_Count = "book-count"   # test-id
+    Fav_Count = "stars-count"   # test-id
    
     
     

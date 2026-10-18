@@ -1,5 +1,7 @@
 import re
 from behave import *
+
+from src.features.pages.katalog import CatalogPage
 from src.features.pages.mina_bocker import MinaBocker
 
 
@@ -8,18 +10,19 @@ from src.features.pages.mina_bocker import MinaBocker
 def step_view_katalog(context):
     context.page.goto(context.base_url)
     context.minabocker = MinaBocker(context.page)
-    context.minabocker.view_catalog_page()   
+    context.catalog = CatalogPage(context.page)
+    context.catalog.view_catalog_page()   
 
 
 @when('the user clicks the favourite icon on a book')
 @when(u'the user clicks the favourite icon again')
 def step_select_favorit_book(context):
-    context.minabocker.click_favorite_icon()
+    context.catalog.click_favorite_icon()
 
 
 @then('the book should be marked as favourite')
 def step_verify_favorit_book_icon(context):
-    context.minabocker.verify_favorit_book_icon()
+    context.catalog.favorit_icon_display()
 
 
 @then('the book should appear in Mina Böcker')
@@ -32,13 +35,14 @@ def step_verify_mina_bocker_page(context):
 def step_given_book_is_favorite (context):
     context.page.goto(context.base_url)
     context.minabocker = MinaBocker(context.page)
-    context.minabocker.view_catalog_page()
-    context.minabocker.click_favorite_icon()
+    context.catalog = CatalogPage(context.page)
+    context.catalog.view_catalog_page()
+    context.catalog.click_favorite_icon()
 
 
 @then('the favourite marking should be removed')
 def step_verify_favorit_icon_removed(context):
-    context.minabocker.verify_favorit_icon_removed_katalog_page()
+    context.catalog.verify_favorit_icon_removed()
 
 
 @then('the book should no longer appear in Mina Böcker')
