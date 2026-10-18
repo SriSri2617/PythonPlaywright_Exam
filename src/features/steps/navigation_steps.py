@@ -51,7 +51,7 @@ def step_statistic_page_display(context):
 
 
 @when('the user clicks Katalog')
-def step_catalog_page(context):
+def step_goto_catalog_page(context):
     context.catalog.click_catalog_btn()
 
 

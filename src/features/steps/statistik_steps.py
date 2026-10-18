@@ -23,7 +23,8 @@ def step_statistic_page(context):
     context.book_count_before = context.statistic.get_book_count_stats_page()
 
     # Fav_book_count
-    context.fav_book_count_before = context.statistic.get_fav_book_count_stats_page()
+    context.fav_book_count_before = (context.statistic
+                                     .get_fav_book_count_stats_page())
 
 
 @then('the total number of books should be displayed')
