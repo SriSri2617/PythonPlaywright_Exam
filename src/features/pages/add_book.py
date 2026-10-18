@@ -12,7 +12,12 @@ class AddBookPage:
     def add_book(self):
         self.page.get_by_test_id(
             BaseLocators.Add_Book
-        ).click()   
+        ).click() 
+        
+    def add_book_page(self):       
+        expect(self.page.locator(
+            "div.form")
+        ).to_be_visible()
        
     # enter title
     def enter_title(self, title):

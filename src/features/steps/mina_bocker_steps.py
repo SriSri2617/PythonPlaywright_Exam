@@ -27,6 +27,7 @@ def step_verify_favorit_book_icon(context):
 
 @then('the book should appear in Mina Böcker')
 def step_verify_mina_bocker_page(context):
+    context.minabocker.mina_bocker_btn()
     context.minabocker.verify_mina_bocker_page()
 
 
@@ -47,4 +48,5 @@ def step_verify_favorit_icon_removed(context):
 
 @then('the book should no longer appear in Mina Böcker')
 def step_book_removed_from_mina_bocker_page(context):
+    context.minabocker.mina_bocker_btn()
     context.minabocker.verify_book_removed_mina_bocker_page()  

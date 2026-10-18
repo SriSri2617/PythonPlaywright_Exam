@@ -9,6 +9,10 @@ class Statistic:
     def statistic_page(self):
         self.page.get_by_test_id(BaseLocators.Statistics).click()
         
+    def stats_page_display(self):    
+        expect(self.page.locator(
+            "div.stats")
+        ).to_be_visible()
         
     def verify_total_book_count(self):
         expect(

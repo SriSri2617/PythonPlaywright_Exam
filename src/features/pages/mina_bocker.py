@@ -7,10 +7,19 @@ class MinaBocker:
         
         
     # Scenario : Add a favorite book
+    
+    def mina_bocker_btn(self):
+        self.page.get_by_test_id(
+            BaseLocators.My_Book
+        ).click()
+        
+    def verify_favorites_page_visible(self):
+        expect(self.page.locator(
+            "div.favorites")
+        ).to_be_visible()
+      
        
-    def verify_mina_bocker_page(self):
-        my_book_page = self.page.get_by_test_id(BaseLocators.My_Book)
-        my_book_page.click()
+    def verify_mina_bocker_page(self):        
         expect(
             self.page.get_by_test_id(
                 MyBooks.My_List)
@@ -20,8 +29,6 @@ class MinaBocker:
       # Scenario : Remove a book from favorite      
             
     def verify_book_removed_mina_bocker_page(self):
-        my_book_page = self.page.get_by_test_id(BaseLocators.My_Book)
-        my_book_page.click()
         expect(
             self.page.get_by_test_id(MyBooks.My_List)
         ).to_be_empty()

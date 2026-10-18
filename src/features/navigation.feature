@@ -6,7 +6,7 @@ Feature: Navigate between pages
   Scenario: 
     Given the user is on the website
     When the user clicks Mina Böcker
-    Then the Mina Böcker page should be displayed
+    Then the my books page should be displayed
 
     When the user clicks Lägg Till Bok
     Then the Add Book page should be displayed
