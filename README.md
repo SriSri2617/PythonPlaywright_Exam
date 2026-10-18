@@ -1,8 +1,8 @@
-### Reading List Test Automation Project
+### Reading List - Test Automation Project
 
 **Overview**
 
-This project is part of the **Testverktyg (TAP VT26D)** examination. The purpose is to test the functionality of the Läslistan web application using Python, Playwright, Behave, and pytest.
+This project is part of the **Test Aautomation with Python** examination. The purpose is to test the functionality of the Läslistan web application using Python, Playwright, Behave, and pytest.
 
 The tests cover the applicaton's frontend and backend functionality. 
 - The frontend tests use Behaviour-Driven Development (BDD) with Gherkin feature files and Behave step definitions. 
@@ -23,31 +23,6 @@ ___
         - Flake8 – Python code style checking
         - Git and GitHub – version control
         - GitHub Actions – Continuous Integration (CI)
-___
-**Project Structure**
-
-        PythonPlaywright_Exam/
-        ├── src/
-        │   ├── features/
-        │   │   ├── pages/
-        │   │   ├── steps/
-        │   │   ├── *.feature
-        │   │   └── environment.py
-        │   ├── book.py
-        │   ├── book_store.py
-        │   └── fav_books.py
-        ├── tests/
-        │   ├── unit/
-        │   └── integration/
-        ├── .github/
-        │   └── workflows/
-        ├── README.md
-        ├── STORIES.md
-        ├── ANSWERS.md
-        ├── requirements.txt
-        ├── behave.ini
-        └── pytest.ini
-
 ___
 **Functionality Tested**
 
@@ -98,9 +73,10 @@ GitHub Actions is used to automate test execution when code is pushed to the con
 
 **Installation and Run**
 
-    1. Clone the project from GitHub - git clone
-    2. Navigate to the project directory - cd PythonPlaywright_Exam
+    1. Clone the project from GitHub - git clone "https://github.com/SriSri2617/PythonPlaywright_Exam.git"
+    2. Navigate to the project directory cd PythonPlaywright_Exam
     3. On windows Powershell create virtual env - python -m venv .venv
-    4. Install the dependencies from requrements.txt - pip install -r Requirements.txt
-    5. Run the backend test with - pytest
-    6. Run the BDD test with - behave
+    4. Activate the virtual env - .venv\Scripts\Activate.ps1
+    5. Install the dependencies from requrements.txt - pip install -r Requirements.txt
+    6. Run the backend test with - pytest
+    7. Run the BDD test with - behave
