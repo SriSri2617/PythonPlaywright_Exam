@@ -6,7 +6,6 @@ class MinaBocker:
     def __init__(self, page):
         self.page = page
 
-
     # Scenario : Add a favorite book
     def mina_bocker_btn(self):
         self.page.get_by_test_id(
@@ -23,7 +22,6 @@ class MinaBocker:
             self.page.get_by_test_id(
                 MyBooks.My_List)
         ).to_be_visible()
-
 
     # Scenario : Remove a book from favorite
     def verify_book_removed_mina_bocker_page(self):
