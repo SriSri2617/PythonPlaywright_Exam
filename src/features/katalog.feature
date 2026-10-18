@@ -10,4 +10,3 @@ Feature: Browse Katalog
     And a list of books should be displayed
     When the user hovers over a book
     Then a favourite icon should be displayed
-    

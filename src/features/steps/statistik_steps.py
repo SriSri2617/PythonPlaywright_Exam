@@ -1,7 +1,6 @@
 from behave import *
 
 from src.features.pages.katalog import CatalogPage
-from src.features.pages.mina_bocker import MinaBocker
 from src.features.pages.statistik import Statistic
 from src.features.pages.add_book import AddBookPage
 

@@ -52,6 +52,4 @@ def test_get_book_by_id_not_found():
 
     book = store.get_book_by_Id(99)
 
-    assert book is None
-
-    
+    assert book is None 

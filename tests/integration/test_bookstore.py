@@ -77,5 +77,3 @@ def test_add_book_to_fav_and_remove():
     
    # Assert
     assert len(store.books) == 1
-
-    

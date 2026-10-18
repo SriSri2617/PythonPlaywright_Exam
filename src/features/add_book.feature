@@ -18,4 +18,3 @@ Feature: Add a new book
         | TDD by Example | Kent Beck  | 
         | 123 @#$        | 456 !?     | 
         | Python Testing | John Smith |
-    

@@ -37,4 +37,3 @@ def test_remove_book_from_favorites():
     favorites.remove(book)
 
     assert len(favorites.books) == 0
-

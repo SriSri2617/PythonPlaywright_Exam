@@ -16,4 +16,3 @@ Feature: Navigate between pages
 
     When the user clicks Katalog
     Then the Catalogue page should be displayed
-    

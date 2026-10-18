@@ -3,7 +3,6 @@ from playwright.sync_api import expect
 from src.features.pages.katalog import CatalogPage
 
 
-
 @given('the user opens the "Läslistan"')
 def step_catalog_page(context):
     context.page.goto(context.base_url)   
@@ -33,4 +32,3 @@ def step_verify_favorit_icon(context):
 @then('a favourite icon should be displayed')
 def step_favorit_icon_display(context):
     context.catalogpage.favorit_icon_display()
-

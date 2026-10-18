@@ -1,8 +1,7 @@
 import re
-
 from playwright.sync_api import expect
-
 from src.features.pages.base_locators import AddBookLocators, BaseLocators
+
 
 class AddBookPage:
     def __init__(self, page):
@@ -41,4 +40,3 @@ class AddBookPage:
         expect(self.page.get_by_test_id(
             AddBookLocators.Submit_Button)
         ).to_be_disabled()
-   

@@ -1,6 +1,5 @@
 import re
 from behave import *
-
 from src.features.pages.katalog import CatalogPage
 from src.features.pages.mina_bocker import MinaBocker
 

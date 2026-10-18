@@ -1,7 +1,6 @@
 from behave import *
 from playwright.sync_api import expect
 from src.features.pages.add_book import AddBookPage
-from src.features.pages.add_book import AddBookLocators
 from src.features.pages.katalog import CatalogPage
 
 

@@ -14,4 +14,3 @@ Feature: Manage favourite books (mina böcker)
     When the user clicks the favourite icon again
     Then the favourite marking should be removed
     And the book should no longer appear in Mina Böcker
-    

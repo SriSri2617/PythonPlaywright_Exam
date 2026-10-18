@@ -7,8 +7,7 @@ Feature: View reading statistics
     Given the user opens Statistik
     Then the total number of books should be displayed
     And the total number of favourite books should be displayed
-    
-    
+      
     
   Scenario:  Statistik view after adding a book    
     Given the current total book count is displayed
@@ -20,4 +19,3 @@ Feature: View reading statistics
      Given the current favourite book count is displayed
      When the user marks a book as favourite
      Then the favourite book count should increase by one
-    

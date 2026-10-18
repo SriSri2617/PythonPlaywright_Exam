@@ -26,8 +26,4 @@ class MyBooks:
 
 class Statistics:
     Book_Count = "book-count"   # test-id
-    Fav_Count = "stars-count"   # test-id
-   
-    
-    
-    
+    Fav_Count = "stars-count"   # test-id   
