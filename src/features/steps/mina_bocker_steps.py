@@ -10,7 +10,7 @@ def step_view_katalog(context):
     context.page.goto(context.base_url)
     context.minabocker = MinaBocker(context.page)
     context.catalog = CatalogPage(context.page)
-    context.catalog.view_catalog_page()   
+    context.catalog.view_catalog_page()
 
 
 @when('the user clicks the favourite icon on a book')
@@ -32,7 +32,7 @@ def step_verify_mina_bocker_page(context):
 
 # Scenario : Remove a book from favorite
 @given('a book is marked as favourite')
-def step_given_book_is_favorite (context):
+def step_given_book_is_favorite(context):
     context.page.goto(context.base_url)
     context.minabocker = MinaBocker(context.page)
     context.catalog = CatalogPage(context.page)
@@ -48,4 +48,4 @@ def step_verify_favorit_icon_removed(context):
 @then('the book should no longer appear in Mina Böcker')
 def step_book_removed_from_mina_bocker_page(context):
     context.minabocker.mina_bocker_btn()
-    context.minabocker.verify_book_removed_mina_bocker_page()  
+    context.minabocker.verify_book_removed_mina_bocker_page()
