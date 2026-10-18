@@ -1,4 +1,4 @@
-from playwright.sync_api import sync_playwright, expect
+from playwright.sync_api import expect
 from src.features.pages.base_locators import BaseLocators
 from src.features.pages.base_locators import Catalog
 

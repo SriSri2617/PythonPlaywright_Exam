@@ -1,5 +1,5 @@
-from playwright.sync_api import sync_playwright, expect
-from src.features.pages.base_locators import BaseLocators, MyBooks, Catalog
+from playwright.sync_api import expect
+from src.features.pages.base_locators import BaseLocators, MyBooks
 
 
 class MinaBocker:

@@ -1,4 +1,3 @@
-import re
 from playwright.sync_api import expect
 from src.features.pages.base_locators import AddBookLocators, BaseLocators
 

@@ -1,5 +1,4 @@
-from behave import *
-
+from behave import given, when, then
 from src.features.pages.katalog import CatalogPage
 from src.features.pages.statistik import Statistic
 from src.features.pages.add_book import AddBookPage

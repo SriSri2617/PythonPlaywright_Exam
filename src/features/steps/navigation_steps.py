@@ -1,5 +1,4 @@
-import re
-from behave import *
+from behave import given, when, then
 from src.features.pages.katalog import CatalogPage
 from src.features.pages.add_book import AddBookPage
 from src.features.pages.mina_bocker import MinaBocker
