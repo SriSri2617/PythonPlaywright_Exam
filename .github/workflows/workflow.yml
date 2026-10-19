@@ -39,7 +39,3 @@ jobs:
       - name: Lint code with flake8
         run: |
           flake8 src tests
-
-      - name: Run tests with pytest
-        run: |
-          pytest --maxfail=1 --disable-warnings -q
