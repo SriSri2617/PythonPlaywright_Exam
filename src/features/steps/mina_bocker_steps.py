@@ -2,14 +2,19 @@ from behave import given, when, then
 from src.features.pages.katalog import CatalogPage
 from src.features.pages.mina_bocker import MinaBocker
 
+def step_up_catalog(context):
+    context.page.goto(context.base_url, 
+                      wait_until = "domcontentloaded")
+    context.minabocker = MinaBocker(context.page)
+    context.catalog = CatalogPage(context.page)
+    context.catalog.view_catalog_page()
+    
 
 # Scenario : Add a favorite book
 @given('the user is viewing the Katalog')
 def step_view_katalog(context):
-    context.page.goto(context.base_url)
-    context.minabocker = MinaBocker(context.page)
-    context.catalog = CatalogPage(context.page)
-    context.catalog.view_catalog_page()
+    step_up_catalog(context)
+    
 
 
 @when('the user clicks the favourite icon on a book')
@@ -32,10 +37,7 @@ def step_verify_mina_bocker_page(context):
 # Scenario : Remove a book from favorite
 @given('a book is marked as favourite')
 def step_given_book_is_favorite(context):
-    context.page.goto(context.base_url)
-    context.minabocker = MinaBocker(context.page)
-    context.catalog = CatalogPage(context.page)
-    context.catalog.view_catalog_page()
+    step_up_catalog(context)
     context.catalog.click_favorite_icon()
 
 

@@ -16,7 +16,7 @@ def before_scenario(context, scenario):
     # after_scenario.
     context.page = context.browser.new_page()
     context.base_url = "https://tap-vt26-testautomatisering.github.io/exam/"
-    context.page.set_default_timeout(10000)
+    context.page.set_default_timeout(1000)
 
 
 # Runs directly after each scenario - clean up to avoid memory leaks

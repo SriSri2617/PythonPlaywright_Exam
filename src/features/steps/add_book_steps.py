@@ -7,7 +7,7 @@ from src.features.pages.katalog import CatalogPage
 @given('the user is on the Lägg Till Bok page')
 def step_given_add_book(context):
     context.page.goto(context.base_url,
-                      wait_until="domcontentloaded")
+                      wait_until = "domcontentloaded")
     context.add_book_page = AddBookPage(context.page)
     context.add_book_page.add_book()
 

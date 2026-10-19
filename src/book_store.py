@@ -5,7 +5,7 @@ class BookStore:
     def __init__(self):
         self.books = []
 
-    def addBook(self, author, title):
+    def addBook(self, title, author):
         book_id = len(self.books)+1
         book = Book(title, author, book_id, favorite=False)
         self.books.append(book)
