@@ -78,5 +78,5 @@ GitHub Actions is used to automate test execution when code is pushed to the con
     3. On windows Powershell create virtual env - python -m venv .venv
     4. Activate the virtual env - .venv\Scripts\Activate.ps1
     5. Install the dependencies from requrements.txt - pip install -r Requirements.txt
-    6. Run the backend test with - pytest
-    7. Run the BDD test with - behave
+    6. Run the backend test with - "python -m pytest tests"
+    7. Run the BDD test with - ".\.venv\Scripts\python.exe -m behave"

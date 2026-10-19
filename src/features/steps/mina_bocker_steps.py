@@ -2,19 +2,19 @@ from behave import given, when, then
 from src.features.pages.katalog import CatalogPage
 from src.features.pages.mina_bocker import MinaBocker
 
+
 def step_up_catalog(context):
-    context.page.goto(context.base_url, 
-                      wait_until = "domcontentloaded")
+    context.page.goto(context.base_url,
+                      wait_until="domcontentloaded")
     context.minabocker = MinaBocker(context.page)
     context.catalog = CatalogPage(context.page)
     context.catalog.view_catalog_page()
-    
+
 
 # Scenario : Add a favorite book
 @given('the user is viewing the Katalog')
 def step_view_katalog(context):
     step_up_catalog(context)
-    
 
 
 @when('the user clicks the favourite icon on a book')
