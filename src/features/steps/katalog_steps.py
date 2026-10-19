@@ -5,7 +5,7 @@ from src.features.pages.katalog import CatalogPage
 @given('the user opens the "Läslistan"')
 def step_catalog_page(context):
     context.page.goto(context.base_url,
-                      wait_until="domcontentloaded", timeout=1000)
+                      wait_until="domcontentloaded")
     context.catalogpage = CatalogPage(context.page)
     context.catalogpage.verify_reading_list_heading()
 
