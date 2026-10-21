@@ -41,7 +41,6 @@ class CatalogPage:
 
     def mouse_hover(self):
         self.page.locator(Catalog.Book_List).first.hover()
-        
 
     def click_favorite_icon(self):
         self.page.get_by_test_id(

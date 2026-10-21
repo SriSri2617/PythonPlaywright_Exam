@@ -11,11 +11,11 @@ def test_add_multiple_books_and_manage_favorite():
     # add books
     store.addBook(
         author=" Jory John",
-        title="The Good Egg"        
+        title="The Good Egg"
     )
     store.addBook(
         author=" Jacqueline Woodson",
-        title="The Day You Begin"       
+        title="The Day You Begin"
     )
 
     # assert added books
@@ -41,7 +41,7 @@ def test_toggle_non_existent_book():
 
     store.addBook(
         author="Russell Punter",
-        title="Goose on the loose"        
+        title="Goose on the loose"
     )
 
     with pytest.raises(ValueError):
@@ -72,7 +72,6 @@ def test_add_book_to_fav_and_remove():
     assert len(fav.books) == 1
     assert fav.books[0].author == "Kent Beck"
     assert fav.books[0].title == "TDD by Example"
-    
 
     # Remove the book
     fav.remove(book)

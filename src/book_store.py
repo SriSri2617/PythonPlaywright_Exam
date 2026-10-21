@@ -6,7 +6,7 @@ class BookStore:
         self.books = []
 
     def addBook(self, author, title):
-        book_id = len(self.books)+1
+        book_id = len(self.books) + 1
         book = Book(author, title, book_id, favorite=False)
         self.books.append(book)
 
