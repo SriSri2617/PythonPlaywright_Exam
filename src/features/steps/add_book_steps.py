@@ -1,6 +1,6 @@
 from behave import given, when, then
 from playwright.sync_api import expect
-from urllib3.util import timeout
+
 
 from src.features.pages.add_book import AddBookPage
 from src.features.pages.katalog import CatalogPage

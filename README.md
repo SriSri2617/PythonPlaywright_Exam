@@ -2,9 +2,9 @@
 
 **Overview**
 
-This project is part of the **Test Aautomation with Python** examination. The purpose is to test the functionality of the Läslistan web application using Python, Playwright, Behave, and pytest.
+This project is part of the **Test Automation with Python** examination. The purpose is to test the functionality of the Läslistan web application using Python, Playwright, Behave, and pytest.
 
-The tests cover the applicaton's frontend and backend functionality. 
+The tests cover the application's frontend and backend functionality. 
 - The frontend tests use Behaviour-Driven Development (BDD) with Gherkin feature files and Behave step definitions. 
 - The backend tests use pytest for unit and integration testing.
 
@@ -49,7 +49,8 @@ Page Objects are used to organize page interactions and locators separately from
 **Backend – Unit and Integration Testing**
 
 - The backend contains the BookStore and FavoriteBooks classes.
-- Unit tests check individual methods and their expected behaviour. Integration tests check how the classes work together.
+- Unit tests verify the individual methods in BookStore and FavoriteBooks.
+Integration tests verify that BookStore and FavoriteBooks work together correctly.
 
 **The required methods are:**
         
