@@ -40,8 +40,8 @@ class CatalogPage:
     # favorite icon
 
     def mouse_hover(self):
-        book = self.page.locator(Catalog.Book_List).first
-        book.hover()
+        self.page.locator(Catalog.Book_List).first.hover()
+        
 
     def click_favorite_icon(self):
         self.page.get_by_test_id(
@@ -56,7 +56,7 @@ class CatalogPage:
     def verify_favorit_icon_removed(self):
         expect(self.page.get_by_test_id(
             Catalog.Fav_Icon)
-        ).not_to_have_class("start selected")
+        ).not_to_have_class("star selected")
 
     def get_book_count(self):
         return self.page.locator(".catalog .book").count()

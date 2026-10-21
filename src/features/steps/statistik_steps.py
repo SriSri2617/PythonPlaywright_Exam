@@ -42,8 +42,8 @@ def step_verify_fav_count(context):
 @when('the user adds a new book with title "{title}" and author "{author}"')
 def step_add_new_book(context, title, author):
     context.addbook.add_book()
-    context.addbook.enter_title("Test Automation Book")
-    context.addbook.enter_author("John Smith")
+    context.addbook.enter_title(title)
+    context.addbook.enter_author(author)
     context.addbook.click_add_book()
 
 

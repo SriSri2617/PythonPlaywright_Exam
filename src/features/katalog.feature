@@ -5,7 +5,7 @@ Feature: Browse Katalog
   
   Scenario: 
     Given the user opens the "Läslistan"
-    Then home displayed with heading "Välkomman"
+    Then home displayed with heading "Välkomman!"
     Then Katalog should be selected by default
     And a list of books should be displayed
     When the user hovers over a book

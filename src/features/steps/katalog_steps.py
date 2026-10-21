@@ -10,7 +10,7 @@ def step_catalog_page(context):
     context.catalogpage.verify_reading_list_heading()
 
 
-@then('home displayed with heading "Välkomman"')
+@then('home displayed with heading "Välkomman!"')
 def step_verify_heading_visible(context):
     context.catalogpage.verify_heading_visible()
 

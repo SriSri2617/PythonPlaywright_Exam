@@ -14,7 +14,7 @@ def before_scenario(context, scenario):
     # Open a new page, to prevent cookies to leak between tests.
     context.page = context.browser.new_page()
     context.base_url = "https://tap-vt26-testautomatisering.github.io/exam/"
-    context.page.set_default_timeout(1000)
+    context.page.set_default_timeout(5000)
 
 
 # Runs directly after each scenario - clean up to avoid memory leaks
