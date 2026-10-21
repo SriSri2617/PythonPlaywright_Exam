@@ -28,8 +28,8 @@ def test_remove_book_from_favorites():
     favorites = FavoriteBooks()
 
     book = Book(
-        author="Kent Beck",
         title="TDD by Example",
+        author="Kent Beck",
         book_id=1,
         favorite=False
     )

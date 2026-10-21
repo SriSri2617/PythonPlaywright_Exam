@@ -5,9 +5,9 @@ class BookStore:
     def __init__(self):
         self.books = []
 
-    def addBook(self, title, author):
+    def addBook(self, author, title):
         book_id = len(self.books)+1
-        book = Book(title, author, book_id, favorite=False)
+        book = Book(author, title, book_id, favorite=False)
         self.books.append(book)
 
     def toggleFavorite(self, book_id):

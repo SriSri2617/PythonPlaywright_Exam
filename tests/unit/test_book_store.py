@@ -9,12 +9,14 @@ def test_add_book():
 
     store.addBook(
         author="Kent Beck",
-        title="TDD by Example"
+        title="TDD by Example"        
     )
 
     assert len(store.books) == 1
     assert store.books[0].author == "Kent Beck"
     assert store.books[0].title == "TDD by Example"
+    
+    
 
 
 @pytest.mark.unit
